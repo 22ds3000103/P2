@@ -304,7 +304,7 @@ async def GA5_4(question: str, file: UploadFile):
     top_bandwidth = ip_bandwidth[top_ip] if top_ip else 0
     return top_bandwidth
 
-def get_best_matches(target, choices, threshold=0.0.913):
+def get_best_matches(target, choices, threshold=0.913):
     """Find all matches for target in choices with Jaro-Winkler similarity >= threshold."""
     target = target.lower()
     matches = [c for c in choices if jellyfish.jaro_winkler_similarity(
